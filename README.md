@@ -655,7 +655,15 @@ If you use this project in your research, please cite:
   year={2026},
   howpublished={\url{https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-phase-2-again}}
 }
-```
+
+```bibtex
+@inproceedings{jaad2017,
+  title={JAAD: A Joint Attention Dataset for Autonomous Driving},
+  author={Rasouli, Amir and Kotseruba, Iuliia and Tsotsos, John K.},
+  booktitle={Proceedings of the IEEE International Conference on Computer Vision Workshops (ICCVW)},
+  year={2017},
+  pages={1--8}
+}
 
 ---
 
@@ -668,6 +676,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👥 Contributors
 
 - **Kimiakarbasi** - *Initial work* - [Kaggle Profile](https://www.kaggle.com/kimiakarbasi)
+- **Civan Arda Ozel** - *Initial work* - [Kaggle Profile](https://www.kaggle.com/cardaozel))
+  
 
 ---
 
