@@ -656,7 +656,7 @@ If you use this project in your research, please cite:
   howpublished={\url{https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-phase-2-again}}
 }
 
-```bibtex
+
 @inproceedings{jaad2017,
   title={JAAD: A Joint Attention Dataset for Autonomous Driving},
   author={Rasouli, Amir and Kotseruba, Iuliia and Tsotsos, John K.},
