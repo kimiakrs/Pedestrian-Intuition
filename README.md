@@ -675,8 +675,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Contributors
 
-- **Kimiakarbasi** - *Initial work* - [Kaggle Profile](https://www.kaggle.com/kimiakarbasi)
-- **Civan Arda Ozel** - *Initial work* - [Kaggle Profile](https://www.kaggle.com/cardaozel))
+- **Civan Arda Ozel** - *Co-author* - [Kaggle Profile](https://www.kaggle.com/cardaozel))
+- **Kimiakarbasi** - *Co-author* - [Kaggle Profile](https://www.kaggle.com/kimiakarbasi)
+- **Andres Cabilon** - *Co-author* - [Kaggle Profile](https://www.kaggle.com/cardaozel))
   
 
 ---
