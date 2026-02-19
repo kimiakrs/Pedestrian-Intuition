@@ -5,24 +5,22 @@ A deep learning system that predicts pedestrian crossing intentions using YOLO o
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)](https://pytorch.org/)
 [![YOLO](https://img.shields.io/badge/YOLO-Ultralytics-green.svg)](https://ultralytics.com/)
-[![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-20BEFF.svg)](https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-phase-2-again)
+[![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-20BEFF.svg)](https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-ue/notebook)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**[View on Kaggle](https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-phase-2-again)**
+**[View on Kaggle](https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-ue/notebook)**
 
 ---
 
 ## Quick Start (Kaggle)
 
-1. **Open the notebook**: [Click here](https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-phase-2-again)
-2. **Add datasets** (see [Dataset section](#-dataset) for details):
+1. **Open the notebook**: [Click here](https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-ue/notebook)
+2. **Add datasets** (see [Dataset section](#dataset) for details):
    - `vehic-ped-intuition` (required)
    - `attributes-label` (required)
    - `first-phase-model` (required)
 3. **Enable GPU** in notebook settings (T4 x2 or higher)
 4. **Run all cells** sequentially
-
-All outputs are saved to `/kaggle/working/` and can be downloaded.
 
 ---
 
@@ -157,7 +155,7 @@ This project is designed to run on **Kaggle Notebooks** with GPU acceleration.
 #### Step-by-Step Setup on Kaggle
 
 1. **Open the Notebook**
-   - Go to: [Pedestrian Intuition Phase 2 - Kaggle Notebook](https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-phase-2-again)
+   - Go to: [Pedestrian Intuition Phase 2 - Kaggle Notebook](https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-ue/notebook)
    - Click "Copy & Edit" to create your own copy
 
 2. **Add Required Kaggle Datasets**
