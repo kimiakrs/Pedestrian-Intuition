@@ -155,7 +155,7 @@ This project is designed to run on **Kaggle Notebooks** with GPU acceleration.
 #### Step-by-Step Setup on Kaggle
 
 1. **Open the Notebook**
-   - Go to: [Pedestrian Intuition Phase 2 - Kaggle Notebook](https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-ue/notebook)
+   - Go to: [Pedestrian Intuition - Kaggle Notebook](https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-ue/notebook)
    - Click "Copy & Edit" to create your own copy
 
 2. **Add Required Kaggle Datasets**
@@ -665,13 +665,13 @@ If you use this project in your research, please cite:
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 👥 Contributors
+## Contributors
 
 - **Civan Arda Ozel** - *Co-author* - [Kaggle Profile](https://www.kaggle.com/cardaozel))
 - **Kimiakarbasi** - *Co-author* - [Kaggle Profile](https://www.kaggle.com/kimiakarbasi)
@@ -689,13 +689,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📧 Contact
+## Contact
 
 For questions, suggestions, or collaborations:
 
 - **Kaggle**: [@kimiakarbasi](https://www.kaggle.com/kimiakarbasi)
-- **Notebook**: [Pedestrian Intuition Phase 2](https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-phase-2-again)
-- **GitHub**: [@yourusername](https://github.com/yourusername) (if applicable)
+- **Notebook**: [Pedestrian Intuition Phase 2](https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-ue)
+- **GitHub**: [@yourusername](https://github.com/kimiakrs)
 
 ---
 
