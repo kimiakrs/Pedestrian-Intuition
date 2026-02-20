@@ -4,9 +4,13 @@ A deep learning system that predicts pedestrian crossing intentions using YOLO o
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)](https://pytorch.org/)
+[![Computer Vision](https://img.shields.io/badge/Field-Computer%20Vision-blue.svg)](#)
 [![LSTM](https://img.shields.io/badge/LSTM-Keras-red?logo=keras&logoColor=white)](https://en.wikipedia.org/wiki/Long_short-term_memory)
 [![YOLO](https://img.shields.io/badge/YOLO-Ultralytics-green.svg)](https://ultralytics.com/)
+[![Temporal Modeling](https://img.shields.io/badge/Temporal-Sequence%20Learning-pink.svg)](#)
+[![Behavior Modeling](https://img.shields.io/badge/Behavior-Temporal%20Prediction-purple.svg)](#)
 [![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-20BEFF.svg)](https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-ue/notebook)
+[![Dataset](https://img.shields.io/badge/Dataset-JAAD-darkgreen.svg)](https://data.nvision2.eecs.yorku.ca/JAAD_dataset/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 **[View on Kaggle](https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-ue/notebook)**
