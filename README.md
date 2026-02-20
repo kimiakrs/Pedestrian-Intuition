@@ -244,7 +244,27 @@ pip install -r requirements.txt
 
 ## Dataset
 
-### Required Kaggle Datasets
+---
+
+### Raw Dataset (Original JAAD Data)
+
+If you want to work with the original raw videos and annotations — without pre-generated feature files or processed frame splits — you can download the official JAAD dataset here:
+
+[JAAD Dataset](https://data.nvision2.eecs.yorku.ca/JAAD_dataset/)
+
+**Includes:**
+- Full raw driving videos
+- XML pedestrian annotations
+- Behavioral attributes
+- Crossing intention labels
+
+Recommended if you want to:
+- Reproduce the full preprocessing pipeline
+- Generate custom frame extraction
+- Modify tracking or feature extraction stages
+- Extend the dataset with additional temporal features
+
+### Preprocessed Kaggle Datasets
 
 This project requires the following datasets to be added to your Kaggle notebook:
 
