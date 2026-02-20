@@ -4,6 +4,7 @@ A deep learning system that predicts pedestrian crossing intentions using YOLO o
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)](https://pytorch.org/)
+[![LSTM](https://img.shields.io/badge/LSTM-Keras-red?logo=keras&logoColor=white)](https://en.wikipedia.org/wiki/Long_short-term_memory)
 [![YOLO](https://img.shields.io/badge/YOLO-Ultralytics-green.svg)](https://ultralytics.com/)
 [![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-20BEFF.svg)](https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-ue/notebook)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -37,9 +38,14 @@ A deep learning system that predicts pedestrian crossing intentions using YOLO o
 - [Technical Details](#technical-details)
 - [Results](#results)
 - [Requirements](#requirements)
+- [Future Work](#future-work)
+- [Contributors](#contributors)
+- [Disclaimer](#disclaimer)
 - [Citation](#citation)
 - [License](#license)
-- [Contributors](#contributors)
+
+
+
 
 ---
 
@@ -77,19 +83,15 @@ The system processes video frames in real-time, tracks pedestrians, extracts kin
 
 ### System Pipeline
 
-Video Frames
-    ↓
-[CLAHE Enhancement] → Improved visibility in low-light
-    ↓
-[YOLO Detection + Tracking] → Pedestrian bounding boxes + Track IDs
-    ↓
-[Feature Extraction] → x, y, vel_x, vel_y, delta_area, aspect_ratio
-    ↓
-[Sequence Building] → Sliding windows of 10 frames
-    ↓
-[LSTM Prediction] → Crossing probability (0-1)
-    ↓
-[Visualization] → Annotated video with predictions
+
+| Stage | Component | Input | Output |
+|-------|-----------|-------|--------|
+| 1 | **CLAHE Enhancement** | Video Frames | Improved visibility in low-light |
+| 2 | **YOLO Detection + Tracking** | Enhanced Frames | Pedestrian bounding boxes + Track IDs |
+| 3 | **Feature Extraction** | Tracked Pedestrians | x, y, vel_x, vel_y, delta_area, aspect_ratio |
+| 4 | **Sequence Building** | Extracted Features | Sliding windows of 10 frames |
+| 5 | **LSTM Prediction** | Feature Sequences | Crossing probability (0-1) |
+| 6 | **Visualization** | Predictions | Annotated video with predictions |
 
 
 ### Model Architecture
@@ -142,7 +144,7 @@ The system extracts 6 kinematic features from each tracked pedestrian:
 
 ---
 
-## Installation & Setup
+## Installation
 
 ### Option 1: Kaggle Notebook (Recommended)
 
@@ -315,25 +317,25 @@ The notebook includes automatic preprocessing:
 
 The notebook is organized into sequential cells. Simply run all cells in order:
 
-1. **Phase 1: YOLO Training** (Cells 1-15)
+1. **Phase 1: YOLO Training** 
    - Dataset discovery
    - YOLO installation and GPU verification
    - Model training (50 epochs)
    - Evaluation on test set
 
-2. **Phase 2: Feature Extraction** (Cells 16-20)
+2. **Phase 2: Feature Extraction** 
    - CLAHE enhancement implementation
    - Multivideo processor for train/val/test splits
    - Feature extraction and CSV generation
    - Data balancing
 
-3. **Phase 3: LSTM Training** (Cells 21-30)
+3. **Phase 3: LSTM Training** 
    - Sequence building
    - LSTM model definition
    - Training loop with early stopping
    - Evaluation and visualization
 
-4. **Phase 4: Real-time Inference** (Cells 31-35)
+4. **Phase 4: Real-time Inference** 
    - Model loading
    - Video processing pipeline
    - Visualization and output generation
@@ -440,7 +442,7 @@ The project is organized as a single Kaggle notebook with the following structur
 ```
 Kaggle Notebook: Pedestrian-Intuition.ipynb
 │
-├── Phase 1: YOLO Detection (Cells 1-15)
+├── Phase 1: YOLO Detection 
 │   ├── Dataset Discovery
 │   ├── YOLO Installation & Setup
 │   ├── GPU Verification
@@ -448,14 +450,14 @@ Kaggle Notebook: Pedestrian-Intuition.ipynb
 │   ├── Test Set Evaluation
 │   └── Video-level Leakage Check
 │
-├── Phase 2: Data Preparation (Cells 16-20)
+├── Phase 2: Data Preparation 
 │   ├── CLAHE Enhancement Implementation
 │   ├── Tracking + XML Handshaking
 │   ├── Multivideo Processor
 │   ├── Feature Extraction
 │   └── Data Balancing
 │
-├── Phase 3: LSTM Training (Cells 21-30)
+├── Phase 3: LSTM Training 
 │   ├── Sequence Building
 │   ├── LSTM Architecture Definition
 │   ├── Training Loop
@@ -642,63 +644,6 @@ tensorboard>=2.13.0     # For training visualization
 
 ---
 
-## Citation
-
-If you use this project in your research, please cite:
-
-```bibtex
-@misc{pedestrian-intention-prediction,
-  title={Pedestrian Intention Prediction for Autonomous Vehicles},
-  author={Kimiakarbasi},
-  year={2026},
-  howpublished={\url{https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-phase-2-again}}
-}
-```bibtex
-
-@inproceedings{jaad2017,
-  title={JAAD: A Joint Attention Dataset for Autonomous Driving},
-  author={Rasouli, Amir and Kotseruba, Iuliia and Tsotsos, John K.},
-  booktitle={Proceedings of the IEEE International Conference on Computer Vision Workshops (ICCVW)},
-  year={2017},
-  pages={1--8}
-}
-
----
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## Contributors
-
-- **Civan Arda Ozel** - *Co-author* - [Kaggle Profile](https://www.kaggle.com/cardaozel)
-- **Kimiakarbasi** - *Co-author* - [Kaggle Profile](https://www.kaggle.com/kimiakarbasi)
-- **Andres Cabilon** - *Co-author* - [Kaggle Profile](https://www.kaggle.com/andressabillon)
-  
-
----
-
-## Acknowledgments
-
-- **Ultralytics** for YOLO implementation
-- **JAAD Dataset** for pedestrian video data
-- **PyTorch** team for deep learning framework
-- OpenCV community for computer vision tools
-
----
-
-## Contact
-
-For questions, suggestions, or collaborations:
-
-- **Kaggle**: [@kimiakarbasi](https://www.kaggle.com/kimiakarbasi)
-- **Notebook**: [Pedestrian Intuition Phase 2](https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-ue)
-- **GitHub**: [@yourusername](https://github.com/kimiakrs)
-
----
-
 ## Future Work
 
 - [x] YOLO + LSTM pipeline implementation
@@ -711,31 +656,15 @@ For questions, suggestions, or collaborations:
 - [ ] Uncertainty quantification for safety-critical applications
 - [ ] Integration with vehicle control systems
 
-## Important Notes for Kaggle Users
+---
 
-### Dataset Requirements Checklist
 
-Before running the notebook, ensure you have added these datasets:
+## Contributors
 
-- `vehic-ped-intuition` - Main dataset with images and labels
-- `attributes-label` - XML annotations with pedestrian metadata
-- `first-phase-model` - Pre-trained YOLO model (or train from scratch)
-- `phase-3-dataset` - Optional: Pre-processed sequences
-- `phase-3-lstm-yolo` - Optional: Pre-trained LSTM model
-
-### GPU Requirements
-
-- **Minimum**: GPU T4 x2 (for training)
-- **Recommended**: GPU P100 or better (for faster training)
-- **Training Time**: ~2-3 hours for YOLO (50 epochs), ~30 min for LSTM (40 epochs)
-
-### Output Files
-
-All outputs are saved to `/kaggle/working/` and can be downloaded:
-- Trained models (`.pth` files)
-- CSV datasets
-- Evaluation metrics and visualizations
-- Processed videos (`.mp4` files)
+- **Civan Arda Ozel** - *Co-author* - [Kaggle Profile](https://www.kaggle.com/cardaozel)
+- **Kimiakarbasi** - *Co-author* - [Kaggle Profile](https://www.kaggle.com/kimiakarbasi)
+- **Andres Cabilon** - *Co-author* - [Kaggle Profile](https://www.kaggle.com/andressabillon)
+  
 
 ---
 
@@ -743,6 +672,33 @@ All outputs are saved to `/kaggle/working/` and can be downloaded:
 
 This project is for research and educational purposes. The models are trained on specific datasets and may not generalize to all scenarios. For safety-critical applications, thorough testing and validation are required.
 
+**If you find this project useful, please consider giving it a star!**
+
+---
+## Citation
+
+If you use this project in your research, please cite:
+
+```bibtex
+@misc{pedestrian-intention-prediction,
+  title={Pedestrian Intention Prediction for Autonomous Vehicles},
+  author={Kimiakarbasi},
+  year={2026},
+  howpublished={\url{https://www.kaggle.com/code/kimiakarbasi/pedestrian-intuition-phase-2-again}}
+}
+
+
+@inproceedings{jaad2017,
+  title={JAAD: A Joint Attention Dataset for Autonomous Driving},
+  author={Rasouli, Amir and Kotseruba, Iuliia and Tsotsos, John K.},
+  booktitle={Proceedings of the IEEE International Conference on Computer Vision Workshops (ICCVW)},
+  year={2017},
+  pages={1--8}
+}
+```
 ---
 
-**If you find this project useful, please consider giving it a star!**
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
