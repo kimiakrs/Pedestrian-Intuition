@@ -48,9 +48,6 @@ A deep learning system that predicts pedestrian crossing intentions using YOLO o
 - [Citation](#citation)
 - [License](#license)
 
-
-
-
 ---
 
 ## Overview
